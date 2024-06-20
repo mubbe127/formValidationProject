@@ -1,5 +1,22 @@
 export {requiredField, firstnameCheck, lastnameCheck, emailCheck, passwordCheck,passwordRepeatCheck}
+const inputFirstname = document.querySelector("#user-firstname");
+const inputLastname = document.querySelector("#user-lastname");
+const inputEmail = document.querySelector("#user-email");
+const inputDate = document.querySelector("#user-birthdate");
+const inputPassword = document.querySelector("#user-password");
+const inputPasswordRepeat = document.querySelector("#user-password-repeat");
 
+
+/*style*/
+
+const arrayInputElements = [
+  inputFirstname,
+  inputLastname,
+  inputEmail,
+  inputDate,
+  inputPassword,
+  inputPasswordRepeat,
+];
 
 
 function requiredField () {
