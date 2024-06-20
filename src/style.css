@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+body {
+}
+
+header {
+}
+
+.formContainer {
+  width: 350px;
+  height: 700px;
+  margin: 10% auto;
+  box-shadow: 2px 2px 6px 4px rgb(229, 225, 225);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formHeader {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.formHeader .formDescription {
+  text-align: center;
+}
+
+form {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding-left: 30px;
+  width: 260px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(143, 142, 142);
+}
+
+label {
+  position: absolute;
+  font-size: 12px;
+  top: 9px;
+  left: 30px;
+  transition:
+    top 0.2s ease,
+    left 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+input::placeholder {
+  opacity: 0;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  height: 30px;
+}
+
+.inputContainer.fullname {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputContainer.fullname input {
+  width: 130px;
+}
+
+.inputContainer.lastname input {
+  padding: 0;
+}
+
+.inputContainer.birthdate input {
+  width: 260px;
+  padding: 0;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  border-bottom: 1px solid rgb(143, 142, 142);
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.visible input::placeholder {
+  opacity: 1;
+}
+
+.visible label {
+  position: absolute;
+  top: -12px;
+  left: 0;
+}
+
+.visible .icon {
+  border-bottom-color: rgb(255, 197, 71);
+}
+
+.visible .icon img {
+  filter: brightness(0) invert(1) sepia(1) saturate(100) hue-rotate(315deg);
+}
+
+.focused input {
+  border-bottom-color: rgb(255, 197, 71);
+}
+
+.focusedicon {
+  border-bottom-color: rgb(143, 142, 142) !important;
+}
+
+
+.error {
+  font-size: 10px;
+ font-weight: 200;
+  padding-left: 10px;
+  padding-top: 3px;
+  position: absolute;
+  width:260px;
+  height:25px;
+  color: rgb(212, 17, 17);
+  border-radius: 5px;
+  top: 31px;
+  right: 0;
+  z-index:1;
+}
+
+.fullname .error {
+
+  width: 130px;
+}
+
+.erroractive input, .erroractive .icon {
+
+  border-bottom-color: rgb(212, 17, 17);
+}
+

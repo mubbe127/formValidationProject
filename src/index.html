@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="formContainer">
+        <div class="formHeader">
+          <div class="iconHeader">ICON</div>
+          <div class="header">
+            <h4>Create a Mobe account</h4>
+          </div>
+          <div class="formDescription">
+            <p>
+              Access all that Yahoo has to offer with a single account. All
+              fields are required.
+            </p>
+          </div>
+        </div>
+        <form action="#" class="formElement" novalidate>
+          <div class="inputContainer fullname">
+            <div class="icon" id="theicon">
+              <img src="./person-name-svgrepo-com.svg" alt="" />
+            </div>
+            <div class="inputContainer firstname">
+              <label for="user-firstname">Full name</label>
+              <input
+                type="text"
+                name="user-firstname"
+                id="user-firstname"
+                placeholder="First name"
+                minlength="2"
+                required
+                pattern="[a-zA-Z]+"
+              />
+              <span class="error"></span>
+            </div>
+            <div class="inputContainer lastname">
+              <label for="user-lastname"></label>
+              <input
+                type="text"
+                name="user-lastname"
+                id="user-lastname"
+                placeholder="Last name"
+                required
+                pattern="[a-zA-Z]+"
+                minlength="3"
+              />
+              <span class="error"></span>
+            </div>
+          </div>
+          <div class="inputContainer email">
+            <div class="icon">
+              <img src="./email-1-svgrepo-com.svg" alt="" />
+            </div>
+            <div>
+              <label for="user-email">Email</label>
+              <input
+                type="email"
+                id="user-email"
+                name="user-email"
+                placeholder="Email"
+                minlength="4" 
+                required
+              />
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="inputContainer birthdate">
+            <div>
+              <label for="user-birthdate"></label>
+              <input type="date" id="user-birthdate" name="user-birthdate" required/>
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="inputContainer password">
+            <div class="icon">
+              <img src="./password-lock-svgrepo-com.svg" alt="" />
+            </div>
+            <div>
+              <label for="user-password">Password</label>
+              <input type="password" name="user-password" id="user-password"
+              required
+              minlength="8"
+              maxlength="20"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="inputContainer password repeat">
+            <div class="icon">
+              <img src="./password-lock-svgrepo-com.svg" alt="" />
+            </div>
+            <div>
+              <label for="user-password-repeat">Password</label>
+              <input
+                type="password"
+                name="user-password-repeat"
+                id="user-password-repeat"
+                required
+                minlength="8"
+                maxlength="20"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              />
+            <span class="error"></span>
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" id="user_submit">submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
